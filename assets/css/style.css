@@ -1,0 +1,323 @@
+:root {
+    --main: #252631;
+    --box: #1e1f28;
+    --text: #ff0550;
+}
+
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 3px;
+  }
+  
+  ::-webkit-scrollbar-button {
+    background-color: var(--main);
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: var(--main);
+  }
+  
+  ::-webkit-scrollbar-track-piece {
+    background-color: var(--main);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--text);
+    border-radius: 15px;
+  }
+  
+  ::-webkit-scrollbar-corner {
+    background-color: var(--main);
+  }
+  
+  ::-webkit-resizer {
+    background-color: var(--main);
+  }
+
+section {
+    height: 100vh;
+    background: var(--main);
+}
+
+section.top > .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Raleway', sans-serif; 
+    font-weight: 600;
+    letter-spacing: 0.2ch;
+    text-align: center;
+    z-index: 1;
+    color: #fff;
+}
+
+section.top > .text h2 {
+    color: var(--text);
+    font-size: 4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+section.top > .text span {
+    color: var(--text);
+}
+
+section.top > .image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.05;
+    width: 450px;
+    height: 450px;
+}
+
+section.top > .text .ip-copy input {
+    font-family: 'Inter', sans-serif;
+    background: var(--main);
+    color: #fff;
+    height: 48px;
+    width: 300px;
+    text-align: center;
+    border: 1px solid var(--text);
+    border-radius: 10px;
+}
+
+section.top > .text .ip-copy button {
+    background: var(--text);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #0000;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+
+section.top > .text .ip-copy button:hover {
+    background: var(--main);
+    border: 1px solid var(--text);
+}
+
+section.top > .text .ip-copy button img {
+    filter: invert();
+}
+
+section.top > .text .ip-copy p {
+    padding: 2px;
+    font-size: 8px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    font-family: 'Inter', sans-serif;
+}
+
+.offer {
+    background: var(--main);
+}
+
+.offer > .container {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 15px;
+}
+
+.offer .container > .box {
+    border-right: 1px solid #33354453;
+    border-left: 1px solid #33354453;
+    padding: 60px;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    margin: 50px auto;
+    color: #fff;
+    background: var(--box);
+}
+
+.offer .container > .box img {
+    filter: invert(22%) sepia(100%) saturate(7088%) hue-rotate(336deg) brightness(100%) contrast(102%);
+}
+
+.footer {
+    height: 150px;
+    background: var(--box);
+    color: #fff;
+    text-align: center;
+}
+
+.footer h2 {
+    padding-top: 35px;
+    opacity: 0.1;
+}
+
+.footer p {
+    opacity: 0.05;
+}
+
+/* Auto Adjustment */
+
+@media (max-width: 1000px) {
+
+    section.top > .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Raleway', sans-serif; 
+        font-weight: 600;
+        letter-spacing: 0.2ch;
+        text-align: center;
+        font-size: 0.85rem;
+        z-index: 1;
+        color: #fff;
+    }
+    
+    section.top > .text h2 {
+        color: var(--text);
+        font-size: 2rem;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+    
+    section.top > .text span {
+        color: var(--text);
+    }
+
+    .offer > .container {
+        font-family: 'Raleway', sans-serif;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        border-radius: 15px;
+    }
+
+    .offer .container > .box {
+        border-right: 1px solid #33354453;
+        border-left: 1px solid #33354453;
+        padding: 60px;
+        align-items: center;
+        justify-content: center;
+        width: 100vh;
+        height: 300px;
+        margin: 0px auto;
+        color: #fff;
+        background: var(--box);
+    }
+
+    section.top > .text .ip-copy input {
+        position: absolute;
+        top: 1%;
+        font-family: 'Inter', sans-serif;
+        background: rgba(255, 255, 255, 0);
+        color: rgba(255, 255, 255, 0);
+        height: 1px;
+        width: 1px;
+        text-align: center;
+        border: none;
+        visibility: hidden;
+    }
+
+    section.top > .text .ip-copy p {
+        padding: 2px;
+        font-size: 1px;
+        visibility: hidden;
+        text-transform: uppercase;
+        opacity: 0.8;
+        font-family: 'Inter', sans-serif;
+    }
+
+}
+
+@media (max-width: 800px) {
+    section.top > .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Raleway', sans-serif; 
+        font-weight: 600;
+        text-align: center;
+        font-size: 0.85rem;
+        z-index: 1;
+        color: #fff;
+    }
+    
+    section.top > .text h2 {
+        color: var(--text);
+        font-size: 2rem;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+    
+    section.top > .text span {
+        color: var(--text);
+    }
+
+    section.top > .image img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.05;
+        width: 256px;
+        height: 256px;
+    }
+
+    .offer > .container {
+        font-family: 'Raleway', sans-serif;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        border-radius: 15px;
+    }
+
+    .offer .container > .box {
+        border-right: 1px solid #33354453;
+        border-left: 1px solid #33354453;
+        padding: 60px;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        height: 300px;
+        margin: 0px auto;
+        color: #fff;
+        background: var(--box);
+    }
+
+    section.top > .text .ip-copy input {
+        position: absolute;
+        top: 1%;
+        font-family: 'Inter', sans-serif;
+        background: rgba(255, 255, 255, 0);
+        color: rgba(255, 255, 255, 0);
+        height: 1px;
+        width: 1px;
+        text-align: center;
+        border: none;
+        visibility: hidden;
+    }
+
+    section.top > .text .ip-copy p {
+        padding: 2px;
+        font-size: 1px;
+        visibility: hidden;
+        text-transform: uppercase;
+        opacity: 0.8;
+        font-family: 'Inter', sans-serif;
+    }
+
+}
